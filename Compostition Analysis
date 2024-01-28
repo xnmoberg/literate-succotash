@@ -1,0 +1,36 @@
+function setup() {
+  createCanvas(500, 250);
+}
+
+function draw() {
+  background(120,190,230);
+  rect(55,15,30,125);
+  rect(110,125,30,110)
+  rect (30,110,400,30);
+  arc(430,110,60,60,PI,TWO_PI+HALF_PI);
+  strokeWeight(70);
+  strokeJoin(BEVEL);
+  ellipse(285,70,30,30);
+  strokeWeight(2);
+  ellipse(285,70,60,10);
+  ellipse (430,110,15,100);
+  strokeWeight(6)
+  point (287,68)
+  point (430,100)
+  line (400,70,450,73)
+  beginShape();
+  strokeWeight(3)
+  vertex(275,222);
+  vertex(285,210);
+  vertex(295,222);
+  vertex(292,206);
+  vertex(304,193);
+  vertex(289,193);
+  vertex(285,181);
+  vertex(281,193);
+  vertex(266,193);
+  vertex(278,206);
+  vertex(275,222);
+endShape()
+  strokeWeight(7)
+}
