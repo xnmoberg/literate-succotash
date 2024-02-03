@@ -1,0 +1,84 @@
+function setup() {
+  createCanvas(600, 300);
+}
+
+
+//mushroom diagram
+function draw() {
+  
+  //ground level
+  strokeWeight(2)
+  line (1,192,599,192)
+  
+  //young mushroom
+  strokeJoin (ROUND); //rounding the sides
+  strokeWeight(3) //thicken stem
+  quad(70,190,60,155,120,155,110,190); //mushroom stem
+  arc(90,154,65,75,PI,0) //mushroom cap
+
+  //fruiting mushroom
+  strokeWeight(3);
+  quad(190,190,200,90,240,90,250,190);//mushroom stem
+  arc(220,80,200,100,PI,0);//mushroom cap
+  arc(220,80,200,15,PI,TWO_PI)//mushroom cap underside
+  line(120,80,198,99)//fills in cap
+  line(320,80,242,99)//fills in cap
+  strokeWeight(1)//lighter lines for gills
+  line(298,75,242,95)//gills
+  line (275,73,242,92)
+  line(250,74,239,91)
+  line(232,73,229,91)
+  line(211,73,213,91)
+  line(190,73,201,91)
+  line(168,74,200,94)
+  line(140,74,200,97)
+  
+  //germinating spores
+  strokeWeight(3)
+  ellipse(420,183,65,25)//germinating spore
+  ellipse(510,189,65,25)//germinating spore
+  
+ //spores
+  strokeWeight(5)
+  point(330,170)//spores
+  point(323,153)
+  point(310,135)
+point(290,123)
+  point(293,102)
+  point(345,160)
+  point(280,106)
+  point(367,152)
+  point(389,158)
+  point (364,169)
+  point(334,135)
+  
+  //hyphae
+  strokeWeight(10)//thick nearby roots
+  line(485,200,400,267)//hyphael roots
+  line(500,204,470,253)
+  line(530,204,555,290)
+  line(435,245,420,295)
+  strokeWeight(6)//thinning roots
+  line(420,285,310,295)
+  line(340,287,320,234)
+  line(323,248,290,220)
+  line(326,258,220,287)
+  strokeWeight(4)//thinning roots
+  line (260,273,140,260)
+  line(170,263,150,283)
+  line(190,265,100,220)
+  line(230,268,215,240)
+  strokeWeight(2)
+  line(125,233,95,190)
+  line(80,190,60,228)
+  line(72,205,80,220)
+
+//labels
+  text('Young mushroom forms',30,80,40,60)
+  text('fruiting body',70,30,100,40)
+  text('spores',350,110,70,40)
+  text('germinating spores',450,140,70,40)
+  text('hyphae',460,270,70,40)
+text('hyphae feeds and grows in soil',30,240,90,60)
+
+}
