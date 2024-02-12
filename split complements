@@ -22,11 +22,11 @@ function draw() { //trying to make horizontal mouse inputs
   
   fill(0.75*x,255,255) // outputs of colored rectangles
   rect(0,0,width,height)
-  if(mouseX > 180){
+  if(mouseX >= 240){
   fill(0.75*x-180,255,255)
   rect(240,0,width,height)
 }
-if (mouseX < 180){
+if (mouseX < 240){
    fill(0.75*x+180,255,255)
   rect(240,0,width,height)
 }
