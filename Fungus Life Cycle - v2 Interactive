@@ -1,0 +1,126 @@
+function setup() {
+  createCanvas(600, 300);
+}
+
+  //interactive label of mycellium network
+
+function draw() 
+{
+  //background
+  background(255)
+  
+  //ground level
+  strokeWeight(2)
+  line (1,192,599,192)
+ 
+  //young mushroom
+  strokeJoin (ROUND); //rounding the sides
+  strokeWeight(3) //thicken stem
+  quad(70,190,60,155,120,155,110,190); //mushroom stem
+  arc(90,154,65,75,PI,0) //mushroom cap
+
+  //fruiting mushroom
+  strokeWeight(3);
+  quad(190,190,200,90,240,90,250,190);//mushroom stem
+  arc(220,80,200,100,PI,0);//mushroom cap
+  arc(220,80,200,15,PI,TWO_PI)//mushroom cap underside
+  line(120,80,198,99)//fills in cap
+  line(320,80,242,99)//fills in cap
+  strokeWeight(1)//lighter lines for gills
+  line(298,75,242,95)//gills
+  line (275,73,242,92)
+  line(250,74,239,91)
+  line(232,73,229,91)
+  line(211,73,213,91)
+  line(190,73,201,91)
+  line(168,74,200,94)
+  line(140,74,200,97)
+  
+  //germinating spores
+  strokeWeight(3)
+  ellipse(420,183,65,25)//germinating spore
+  ellipse(510,189,65,25)//germinating spore
+  
+ //spores
+  strokeWeight(5)
+  point(330,170)//spores
+  point(323,153)
+  point(310,135)
+  point(345,160)
+  point(367,152)
+  point(389,158)
+  point (364,169)
+  point(334,135)
+  point (305,110)
+  
+  
+  //hyphae
+  strokeWeight(2)//thin young nearby roots
+  line(485,198,400,267)//hyphael roots
+  line(500,202,470,253)
+  line(530,198,555,290)
+  line(435,241,420,295)
+  strokeWeight(4)//growing roots
+  line(420,285,310,295)
+  line(340,289,320,234)
+  line(323,248,290,220)
+  line(326,258,220,287)
+  strokeWeight(6)//growing roots
+  line (260,273,140,260)
+  line(170,263,150,283)
+  line(190,265,100,220)
+  line(230,268,215,240)
+  strokeWeight(10) // growing roots
+  line(125,230,98,195)
+  line(76,195,60,228)
+  line(72,205,80,220)
+
+//labels
+  textSize(14)
+  text('Young mushroom forms',20,70,40,60)
+  text('Fruiting body',68,25,100,40)
+  text('Spores',350,110,70,40)
+  text('Germinating spores',450,135,70,40)
+  text('Hyphae form',460,270,70,40)
+text('Large hyphae networks are called Mycelium',30,240,90,60)
+  
+     //interactive label of young mushroom
+     if ((mouseX > 30) && (mouseX < 123) &&
+ (mouseY > 90) && (mouseY < 192) && (mouseIsPressed)) {
+    text('Mycelium condenses into the tiniest stage of mushrooms - primordia.', 400,10,150,80) } 
+  else{ 
+    strokeWeight(0)
+    rect(400,10,150,80)  
+  }   
+    
+  //interactive label of adult mushroom
+   if ((mouseX > 124) && (mouseX < 298) &&
+(mouseY > 40) && (mouseY < 192) && (mouseIsPressed)) {
+  text('The mushroom is fully grown so it will produce spores before decomposing',400,10,150,80 )
+   }
+  
+  //interactive label of spores
+if ((mouseX > 304) && (mouseX < 395) &&
+(mouseY > 100) && (mouseY < 186) && (mouseIsPressed)) {  
+  text('Released spores are spread via environmental factors - air, water, animals, etc.', 400,10,150,80)
+}
+  
+  //interactive label of germinating spores
+if ((mouseX > 400) && (mouseX < 543) &&
+(mouseY > 155) && (mouseY < 205) && (mouseIsPressed)) {  
+  text('Spores in favorable envrionments break their dormancy and germinate', 400,10,150,80)  
+}  
+  
+  //interactive label of hyphael root formation
+if ((mouseX > 280) && (mouseX < 550) &&
+(mouseY > 206) && (mouseY < 295) && (mouseIsPressed)) {  
+  text('The spore cells multiply into the thin tubular structure of the adult fungus, the hyphae', 400,10,150,80) 
+}
+  
+  //interactive label of mycellium network
+if ((mouseX > 30 ) && (mouseX < 280) &&
+(mouseY > 195) && (mouseY < 295) && (mouseIsPressed)) {  
+  text('The mycellium networks consume nutrients in its substrate', 400,10,150,80)  
+}
+  
+}
