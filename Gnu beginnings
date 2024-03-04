@@ -1,0 +1,48 @@
+function setup() {
+  createCanvas(600, 400);
+  frameRate(1)
+}
+
+function draw() {
+  background(200);
+  for (var i = 100; i < width; i += 50){
+    var gray = int(random(0, 100));;
+    var scalar = random(0.5,1.5);
+    gnu(i,100,gray,scalar);
+}
+}
+
+
+function gnu(x,y,g,s) {
+  push(5);
+  translate(x,y);
+  scale(s);
+  stroke(g); 
+  strokeWeight(60);
+  line(-10,-35,0,45);
+  line(10,-35,0,45); //head
+  noStroke();
+  fill(255-g)
+  ellipse(-28,-16,20,20);
+  ellipse(28,-16,20,20); //eye balls
+  strokeWeight(5)
+  stroke(g)
+  ellipse(-32,-16,5,5)
+  ellipse(32,-16,5,5) //pupils
+  strokeWeight(20)
+  line(28,-50,50,-20)
+  line(-28,-50,-50,-20) //ears
+  strokeWeight(12)
+  triangle(28,-50,20,-60,60,-70)
+  triangle(-28,-50,-20,-60,-60,-70) 
+  strokeWeight(5)
+  fill(g)
+  triangle(70,-78,90,-120,92,-85)
+  triangle(-70,-78,-90,-120,-92,-85) //horns
+  noStroke()
+  fill(230-g)
+  ellipse(-10,50,7,7);
+  ellipse(10,50,7,7);
+  
+  
+}
